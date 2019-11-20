@@ -1,5 +1,5 @@
 defmodule TelemetryTest.Handler do
-  def handle(events, measurement, metadata, config) do
-    IO.inspect([events, measurement, metadata, config])
+  def handle([:spaceship, :engine], measurement, metadata, config) do
+    IO.inspect([measurement, metadata, config])
   end
 end
