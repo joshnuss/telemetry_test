@@ -1,9 +1,9 @@
-defmodule TelemetryTest.Thing do
-  def do_stuff do
+defmodule TelemetryTest.Spacehip do
+  def accelerate do
     event = [:spaceship, :engines]
     measurements = %{
       timestamp: DateTime.utc_now,
-      count: 10,
+      online: 4,
       speed: 10_000_000_000,
       check_engine_light: :on
     }
