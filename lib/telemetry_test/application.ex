@@ -6,7 +6,7 @@ defmodule TelemetryTest.Application do
   use Application
 
   def start(_type, _args) do
-    :telemetry.attach :test, [:spaceship, :engines], &TelemetryTest.Handler.handle/4, :no_config
+    :telemetry.attach_many :test, [[:spaceship, :engines], [:spaceship, :lights]], &TelemetryTest.Handler.handle/4, :no_config
 
     children = [
       # Starts a worker by calling: TelemetryTest.Worker.start_link(arg)
