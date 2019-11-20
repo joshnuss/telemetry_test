@@ -9,5 +9,14 @@ defmodule TelemetryTest.Spacehip do
     }
 
     :ok = :telemetry.execute(event, measurements)
+
+    event = [:spaceship, :lights]
+    measurements = %{
+      timestamp: DateTime.utc_now,
+      online: 22,
+      lumens: 10_000_000_000
+    }
+
+    :ok = :telemetry.execute(event, measurements)
   end
 end
